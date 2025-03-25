@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: "Winky Sans", sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation menu */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 2rem 5rem;
+    font-size: 20px;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left {
+    flex-grow: 1;
+    gap: 50px;
+}
+
+.nav-right {
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.primary-btn {
+    padding: 10px 20px;
+    align-content: center;
+    background: linear-gradient(90deg, #04b8ff, #03a8fa);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background: linear-gradient(90deg, #04b8ffe8, #03a8fae1);
+}
+
+/* Main Content */
+main {
+    padding: 0 5rem;
+    flex-grow: 1;
+}
+
+/* Hero section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 50px;
+}
+
+.tagline-description {
+    color: #707070;
+    font-size: 18px;
+    overflow: auto;
+    
+}
+
+.search-bar {
+    width: 80%;
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+
+/* Features section */
+.features-section {
+    margin: 5rem 0;
+}
+
+.features-heading {
+    font-size: 35px;
+}
+
+.features-list {
+    font-size: 20px;
+}
+
+.feature-title {
+    color: #03a8fa;
+}
+
+/* Footer section */
+footer{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px 0;
+    background: linear-gradient(90deg, #04b8ff, #03a8fa);
+    color: white;
+}
+
+/* Responsive Handling */
+@media (max-width: 690px) {
+    nav {
+        padding: 1rem 1rem;
+        display: flex;
+        flex-direction: row;
+        font-size: 15px;
+    }
+
+    .nav-left{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .nav-right{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    .main-contents {
+        padding: 1rem 1rem;
+    }
+
+    .tagline { 
+        font-size: 30px;
+        line-height: 1;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .tagline-description {
+        font-size: 15px;
+    }
+
+    .search-bar {
+        padding: 5px 5px;
+    }
+
+    .features-section{
+        margin-top: 5rem;
+    }
+
+    .features-heading {
+        font-size: 30px;
+    }
+    
+    .features-list {
+        text-align: left;
+        font-size: 18px;
+        padding-left: 1rem;
+        
+    }
+}
