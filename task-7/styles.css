@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+main {
+    padding: 1rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 32.625rem;
+    margin: 0 auto;
+    
+}
+
+.carousel-images {
+    display: flex;
+    aspect-ratio: 1 / 1;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    
+}
+
+.carousel-images img {
+    flex: 1 0 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+.carousel-slider {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.carousel-slider a {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0.75;
+    transition: opacity ease 0.2s;
+}
+
+.carousel-slider a:hover {
+    opacity: 1;
+    transform: scale(1.5);
+    transition: opacity ease 0.2s;
+}
