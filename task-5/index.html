@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal popup using CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <input type="checkbox" id="click" />
+        <label class="dialog-btn" for="click">
+            <p>Click to open modal</p>
+        </label>
+
+        <div class="dialog-modal">
+            <div class="dialog-content">
+                <h3 class="dialog-heading">This is a modal popup made only using CSS</h3>
+                <p class="dialog-description">This modal popup is created using the CSS checkbox hack, which uses an hidden checkbox input. When the checkbox is checked through an associated label, adjacent sibling selectors (~) apply styles to display the modal. The modal can be closed by unchecking the checkbox using another label inside the modal.
+                </p>
+                <label class="dialog-btn" for="click">
+                    <p>Click to close modal</p>
+                </label>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        
+    </main>
+</body>
+</html>
