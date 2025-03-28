@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+    height: 100%;
+    background-color: #dbdbdb;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Winky Sans", sans-serif;
+}
+
+.accordion {
+    position: relative;
+    display: block;
+    background-color: white;
+    border: solid 1px #e0e0e0;
+    max-width: 50rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.accordion h1 {
+    margin-bottom: 1rem;
+}
+
+.accordion-item {
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+input[id^="accordion-trigger-"] {
+    display: none;
+}
+
+label[for^="accordion-trigger-"] {
+    display: flex;
+    flex-grow: 1;
+    cursor: pointer;
+    padding: 0.7rem;
+    background-color: #00B3B4;
+    border: solid 2px #379AA4;
+    color: white;
+}
+
+[id^="accordion-content-"] {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding: 0 0.7rem;
+    padding-top: 0;
+    transition: height 0.5s ease, padding-top 0.2s ease;
+    background-color: rgb(210, 234, 255);
+    border-left: solid 1px gray;
+    border-bottom: solid 1px gray;
+    border-right: solid 1px gray;
+    font-size: 1rem;
+
+}
+
+#accordion-trigger-1:checked ~ #accordion-content-1,
+#accordion-trigger-2:checked ~ #accordion-content-2,
+#accordion-trigger-3:checked ~ #accordion-content-3 {
+    height: 100px;
+    overflow: auto;
+    padding-top: 0.5rem;
+    transition: height 0.5s ease, padding-top 0.2s ease;
+}
+
+@media (max-width: 640px) {
+    .accordion h1 {
+        font-size: 1.1rem;
+    }
+
+    #accordion-trigger-1:checked ~ #accordion-content-1,
+    #accordion-trigger-2:checked ~ #accordion-content-2,
+    #accordion-trigger-3:checked ~ #accordion-content-3 {
+        height: 160px;
+    }
+}
